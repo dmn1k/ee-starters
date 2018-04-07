@@ -6,12 +6,12 @@
         http://java.sun.com/xml/ns/javaee/ejb-jar_3_0.xsd
         http://xmlns.oracle.com/weblogic/weblogic-web-app
         http://xmlns.oracle.com/weblogic/weblogic-web-app/1.4/weblogic-web-app.xsd">
-  <context-root>jaxrs-demo</context-root>
+  <wls:context-root>jaxrs-demo</wls:context-root>
   <wls:container-descriptor>
-    <prefer-application-packages>
-      <package-name>org.slf4j</package-name>
-      <package-name>com.fasterxml.jackson.*</package-name>
-      <package-name>org.glassfish.jersey.media</package-name>
-    </prefer-application-packages>
+    <wls:prefer-application-packages>
+      <wls:package-name>org.slf4j</wls:package-name>
+      <wls:package-name>com.fasterxml.jackson.*</wls:package-name>
+      <wls:package-name>org.glassfish.jersey.media</wls:package-name>
+    </wls:prefer-application-packages>
   </wls:container-descriptor>
 </wls:weblogic-web-app>
