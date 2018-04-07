@@ -8,6 +8,8 @@ import javax.persistence.PersistenceContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.LocalDate;
+
 @Singleton
 @Startup
 public class Bootstrapper {
@@ -23,7 +25,7 @@ public class Bootstrapper {
     }
 
     private void addItem(String desc) {
-        TodoItem item = new TodoItem(desc);
+        TodoItem item = new TodoItem(desc, LocalDate.now());
         em.persist(item);
         
         // flush to force persist and get generated id

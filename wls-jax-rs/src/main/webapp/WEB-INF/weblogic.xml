@@ -7,9 +7,11 @@
         http://xmlns.oracle.com/weblogic/weblogic-web-app
         http://xmlns.oracle.com/weblogic/weblogic-web-app/1.4/weblogic-web-app.xsd">
   <context-root>jaxrs-demo</context-root>
-  <wls:container-descriptor>      
+  <wls:container-descriptor>
     <prefer-application-packages>
       <package-name>org.slf4j</package-name>
+      <package-name>com.fasterxml.jackson.*</package-name>
+      <package-name>org.glassfish.jersey.media</package-name>
     </prefer-application-packages>
   </wls:container-descriptor>
 </wls:weblogic-web-app>

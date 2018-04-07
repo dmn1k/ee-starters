@@ -13,10 +13,7 @@ import javax.ws.rs.ext.Provider;
 @Provider
 public class CorsFilter implements ContainerResponseFilter {
 
-    public static final String ALLOWED_METHODS = "GET, POST, PUT, DELETE, OPTIONS, HEAD";
-    public final static int MAX_AGE = 42 * 60 * 60;
     public final static String DEFAULT_ALLOWED_HEADERS = "origin,accept,content-type";
-    public final static String DEFAULT_EXPOSED_HEADERS = "location,info";
 
     @Override
     public void filter(ContainerRequestContext requestContext, ContainerResponseContext responseContext) throws IOException {

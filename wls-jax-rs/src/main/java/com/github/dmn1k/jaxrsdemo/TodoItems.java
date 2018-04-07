@@ -14,4 +14,8 @@ public class TodoItems {
     public Optional<TodoItem> find(long id){
         return Optional.ofNullable(em.find(TodoItem.class, id));
     }
+
+    public void persist(TodoItem item){
+        em.persist(item);
+    }
 }
