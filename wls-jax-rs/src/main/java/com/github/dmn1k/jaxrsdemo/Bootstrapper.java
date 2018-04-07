@@ -28,8 +28,6 @@ public class Bootstrapper {
         TodoItem item = new TodoItem(desc, LocalDate.now());
         em.persist(item);
         
-        // flush to force persist and get generated id
-        em.flush();
-        LOGGER.info("Persisted todo item with id {}", item.getId());
+        LOGGER.info("Persisted todo item {}", item);
     }
 }

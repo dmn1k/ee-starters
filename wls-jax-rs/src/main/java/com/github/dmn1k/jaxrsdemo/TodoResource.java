@@ -24,7 +24,6 @@ public class TodoResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response create(TodoItem item){
-        item.setDescription(item.getDescription() + " " + item.getDueDate().toString());
         todoItems.persist(item);
 
         return Response.ok().build();
